@@ -12,6 +12,7 @@ To handle these challenges efficiently, we leverage **DPDK (Data Plane Developme
 
 A GTP-U v1 packet carried over UDP/2152 consists of multiple headers stacked before the actual user payload:
 
+```text
 +-------------------+
 | Ethernet Header   |  ← MAC source/destination
 +-------------------+
