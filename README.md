@@ -28,7 +28,7 @@ A GTP-U v1 packet carried over UDP/2152 consists of multiple headers stacked bef
 +-------------------+
 | Payload           |  ← user data (e.g., HTTP, video, DNS)
 +-------------------+
-
+```
 This structure shows that the actual user packet lies inside an extra tunneling layer and requires decapsulation before further processing.
 
 
