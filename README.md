@@ -65,14 +65,16 @@ Normally, each incoming packet requires a full processing cycle: mbuf allocation
 
 The CPU cost can be modeled as:
 
-CPU_Cost_no_GRO ≈ N × C_pkt  
-CPU_Cost_with_GRO ≈ (N / k) × C_pkt  
+```text
+CPU_Cost_no_GRO   ≈  N × C_pkt
+CPU_Cost_with_GRO ≈ (N / k) × C_pkt
+ 
 
 where:  
 - N = number of input packets,  
 - k = average number of packets merged together,  
 - C_pkt = base cost of processing one packet.  
-
+```
 For example, if on average 10 packets are merged (k=10), the CPU overhead is reduced by roughly an order of magnitude.
 
 **Two main strategies exist:**  
